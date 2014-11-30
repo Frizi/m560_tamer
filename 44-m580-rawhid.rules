@@ -1,0 +1,21 @@
+# loosely based on udev rules from Solaar project
+ACTION != "add", GOTO="end"
+SUBSYSTEM != "hidraw", GOTO="end"
+
+ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c52b", GOTO="apply"
+
+GOTO="end"
+LABEL="apply"
+
+# don't apply to the paired peripherals, just the receivers
+DRIVERS=="logitech-djdevice", GOTO="end"
+
+# Allow any seated user to access the receiver.
+# uaccess: modern ACL-enabled udev
+# udev-acl: for Ubuntu 12.10 and older
+TAG+="uaccess", TAG+="udev-acl"
+
+# run script on each receiver connection
+RUN+="m560_tamer"
+
+LABEL="end"

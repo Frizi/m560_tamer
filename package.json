@@ -1,0 +1,33 @@
+{
+  "name": "m560_tamer",
+  "version": "0.1.0",
+  "description": "Tames Logitech m560 \"Made for Windows\" mouse under linux. Needs r/w on rawhid0, which has to be this mouse. See udev config file.",
+  "main": "main.js",
+  "dependencies": {
+    "hid-engine": "^0.0.2",
+    "lodash": "^2.4.1",
+    "node-hid": "^0.3.2",
+    "x11": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frizi/m560_tamer"
+  },
+  "keywords": [
+    "logitech",
+    "m560",
+    "rawhid",
+    "hid",
+    "unifying"
+  ],
+  "author": "Frizi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frizi/m560_tamer/issues"
+  },
+  "homepage": "https://github.com/Frizi/m560_tamer"
+}
