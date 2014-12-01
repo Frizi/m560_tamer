@@ -3,7 +3,7 @@ var x11 = require('x11');
 var _ = require('lodash');
 
 var dev = '/dev/hidraw0';
-2
+
 var rs = fs.createReadStream(dev);
 var ws = fs.createWriteStream(dev);
 
